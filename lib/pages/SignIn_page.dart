@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/pages/SignUp_page.dart';
 
+import 'home_page.dart';
+
 class SignIn extends StatefulWidget {
   const SignIn({Key? key, required this.title}) : super(key: key);
 
@@ -17,6 +19,9 @@ class _SignInState extends State<SignIn> {
   
   _callSignUp(){
     Navigator.pushReplacementNamed(context, SignUp.id);
+  }
+  _callHome(){
+    Navigator.pushReplacementNamed(context, Home.id);
   }
 
   @override
@@ -106,24 +111,29 @@ class _SignInState extends State<SignIn> {
                   SizedBox(height: 20,),
 
                   // #signinbutton
-                  Container(
-                    height: 50,
-                    padding: EdgeInsets.only(left: 10,right: 10),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.white54.withOpacity(0.2),width: 2),
-                      borderRadius: BorderRadius.circular(7),
-                      ),
-                    child: Center(
-                      child: Text(
-                        "Sign In",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 17,
+                  TextButton(
+                    onPressed: (){
+                      _callHome();
+                    },
+                    child: Container(
+                      height: 50,
+                      padding: EdgeInsets.only(left: 10,right: 10),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.white54.withOpacity(0.2),width: 2),
+                        borderRadius: BorderRadius.circular(7),
+                        ),
+                      child: Center(
+                        child: Text(
+                          "Sign In",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 17,
+                          ),
                         ),
                       ),
-                    ),
-                    ),
+                      ),
+                  ),
                 ],
               ),
             ),

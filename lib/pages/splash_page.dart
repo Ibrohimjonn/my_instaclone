@@ -1,8 +1,7 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'home_page.dart';
 
-import 'SignIn_page.dart';
 
 class Splash extends StatefulWidget {
   const Splash({Key? key,required this.title}) : super(key: key);
@@ -23,7 +22,7 @@ class _SplashState extends State<Splash> {
   }
 
   _callSignIn(){
-    Navigator.pushReplacementNamed(context, SignIn.id);
+    Navigator.pushReplacementNamed(context, Home.id);
   }
 
   @override
